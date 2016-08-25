@@ -47,7 +47,7 @@
 		if(16)
 			new /obj/item/weapon/guardiancreator(src)
 		if(17)
-			new /obj/item/stack/sheet/runed_metal/fifty(src)
+			new /obj/item/borg/upgrade/modkit/aoe/mobs(src)
 		if(18)
 			new /obj/item/device/warp_cube/red(src)
 		if(19)
@@ -473,7 +473,7 @@
 		if(2)
 			new /obj/item/weapon/lava_staff(src)
 		if(3)
-			new /obj/item/weapon/spellbook/oneuse/fireball(src)
+			new /obj/item/weapon/spellbook/oneuse/sacredflame(src)
 			new /obj/item/weapon/gun/magic/wand/fireball(src)
 		if(4)
 			new /obj/item/weapon/dragons_blood(src)
@@ -697,7 +697,7 @@
 	if(used)
 		return
 	used = TRUE
-	var/choice = input(user,"Who do you want dead?","Pick Reinforcement") as null|anything in player_list
+	var/choice = input(user,"Who do you want dead?","Choose Your Victim") as null|anything in player_list
 
 	if(!(isliving(choice)))
 		user << "[choice] is already dead!"

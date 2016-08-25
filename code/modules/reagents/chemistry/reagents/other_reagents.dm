@@ -422,6 +422,7 @@
 	id = "gluttonytoxin"
 	description = "An advanced corruptive toxin produced by something terrible."
 	color = "#5EFF3B" //RGB: 94, 255, 59
+	can_synth = 0
 
 /datum/reagent/gluttonytoxin/reaction_mob(mob/M, method=TOUCH, reac_volume)
 	M.ForceContractDisease(new /datum/disease/transformation/morph(0))
@@ -807,6 +808,7 @@
 	id = "nanomachines"
 	description = "Microscopic construction robots."
 	color = "#535E66" // rgb: 83, 94, 102
+	can_synth = 0
 
 /datum/reagent/nanites/reaction_mob(mob/M, method=TOUCH, reac_volume, show_message = 1, touch_protection = 0)
 	if(method==PATCH || method==INGEST || method==INJECT || (method == VAPOR && prob(min(reac_volume,100)*(1 - touch_protection))))
@@ -817,6 +819,7 @@
 	id = "xenomicrobes"
 	description = "Microbes with an entirely alien cellular structure."
 	color = "#535E66" // rgb: 83, 94, 102
+	can_synth = 0
 
 /datum/reagent/xenomicrobes/reaction_mob(mob/M, method=TOUCH, reac_volume, show_message = 1, touch_protection = 0)
 	if(method==PATCH || method==INGEST || method==INJECT || (method == VAPOR && prob(min(reac_volume,100)*(1 - touch_protection))))
@@ -1175,7 +1178,6 @@
 /datum/reagent/toxin/mutagen/mutagenvirusfood
 	name = "mutagenic agar"
 	id = "mutagenvirusfood"
-	description = "mutates blood"
 	color = "#A3C00F" // rgb: 163,192,15
 
 /datum/reagent/toxin/mutagen/mutagenvirusfood/sugar
@@ -1186,19 +1188,34 @@
 /datum/reagent/medicine/synaptizine/synaptizinevirusfood
 	name = "virus rations"
 	id = "synaptizinevirusfood"
-	description = "mutates blood"
 	color = "#D18AA5" // rgb: 209,138,165
 
 /datum/reagent/toxin/plasma/plasmavirusfood
 	name = "virus plasma"
 	id = "plasmavirusfood"
-	description = "mutates blood"
 	color = "#A69DA9" // rgb: 166,157,169
 
 /datum/reagent/toxin/plasma/plasmavirusfood/weak
 	name = "weakened virus plasma"
 	id = "weakplasmavirusfood"
 	color = "#CEC3C6" // rgb: 206,195,198
+
+/datum/reagent/uranium/uraniumvirusfood
+	name = "decaying uranium gel"
+	id = "uraniumvirusfood"
+	color = "#67ADBA" // rgb: 103,173,186
+
+/datum/reagent/uranium/uraniumvirusfood/unstable
+	name = "unstable uranium gel"
+	id = "uraniumplasmavirusfood_unstable"
+	color = "#2FF2CB" // rgb: 47,242,203
+
+/datum/reagent/uranium/uraniumvirusfood/stable
+	name = "stable uranium gel"
+	id = "uraniumplasmavirusfood_stable"
+	color = "#04506C" // rgb: 4,80,108
+
+// Bee chemicals
 
 /datum/reagent/royal_bee_jelly
 	name = "royal bee jelly"
@@ -1211,6 +1228,8 @@
 		M.say(pick("Bzzz...","BZZ BZZ","Bzzzzzzzzzzz..."))
 	..()
 
+//Misc reagents
+
 datum/reagent/romerol
 	name = "romerol"
 	// the REAL zombie powder
@@ -1222,6 +1241,7 @@ datum/reagent/romerol
 		of the host body."
 	color = "#123524" // RGB (18, 53, 36)
 	metabolization_rate = INFINITY
+	can_synth = 0
 
 /datum/reagent/romerol/on_mob_life(mob/living/carbon/human/H)
 	// Silently add the zombie infection organ to be activated upon death

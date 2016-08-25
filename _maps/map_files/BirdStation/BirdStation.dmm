@@ -2066,6 +2066,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/ntnet_relay,
 /turf/open/floor/plasteel/black,
 /area/turret_protected/tcomeast{
 	name = "\improper Telecommunications Chamber"
@@ -8036,7 +8037,6 @@
 /area/maintenance/fsmaint)
 "atE" = (
 /obj/structure/table/wood,
-/obj/machinery/computer/stockexchange,
 /turf/open/floor/carpet,
 /area/maintenance/fsmaint)
 "atF" = (
@@ -18751,18 +18751,11 @@
 /area/security/warden)
 "aUf" = (
 /obj/structure/rack,
-/obj/item/weapon/gun/energy/temperature{
-	name = "security temperature gun";
-	origin_tech = "combat=2;materials=2;powerstorage=1;magnets=1";
-	pin = /obj/item/device/firing_pin;
+/obj/item/weapon/gun/energy/temperature/security{
 	pixel_x = -5;
 	pixel_y = 5
 	},
-/obj/item/weapon/gun/energy/temperature{
-	name = "security temperature gun";
-	origin_tech = "combat=2;materials=2;powerstorage=1;magnets=1";
-	pin = /obj/item/device/firing_pin
-	},
+/obj/item/weapon/gun/energy/temperature/security,
 /turf/open/floor/plasteel/vault{
 	dir = 8
 	},
@@ -23793,7 +23786,6 @@
 /area/maintenance/fsmaint)
 "ZAw" = (
 /obj/structure/table,
-/obj/machinery/computer/stockexchange,
 /turf/open/floor/plasteel,
 /area/quartermaster/storage)
 "ZAx" = (
@@ -64057,13 +64049,13 @@ bee
 aTF
 aUr
 aUr
-aWF
-aXi
+aWG
+aWG
 bep
 aWI
 bep
-aXi
-aZO
+aWG
+aWG
 aTK
 bew
 baZ
@@ -66113,13 +66105,13 @@ aUr
 aUr
 aUr
 aUr
-aWJ
-aXi
-aXi
-aXi
-aXi
-aXi
-aZR
+aWG
+aWG
+aWG
+aWG
+aWG
+aWG
+aWG
 aTK
 beA
 beA
