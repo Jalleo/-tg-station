@@ -215,26 +215,6 @@
 	name = "Detached Teleporter"
 	description = "The structure of this surprisingly intact teleporter suggests that it was once part of a larger structure, but what remains of said structure, if anything, can only be guessed at."
 
-/datum/map_template/ruin/space/vaporwave
-	id = "vaporwave"
-	suffix = "vaporwave.dmm"
-	name = "Aesthetic Outpost"
-	description = "Pause and remember-- You are unique.You are special. Every mistake, trial, and hardship has helped to sculpt your real beauty. \
-	Stop hating yourself and start appreciating and loving yourself!"
-
-/datum/map_template/ruin/space/bus
-	id = "bus"
-	suffix = "bus.dmm"
-	name = "Waylaid Buses"
-	description = "There seems to be a pair of buses that pulled over for repairs. What were they doing..? Their shipment sure  seems to be filled with a strange mix. \
-	Anyway, it looks like some people tried to fix it up for a long time but didn't really get anywhere..."
-
-
-/datum/map_template/ruin/space/miracle
-	id = "miracle"
-	suffix = "miracle.dmm"
-	name = "Ordinary Space Tile"
-	description = "Absolutely nothing strange going on here please move along, plenty more space to see right this way!"
 
 /datum/map_template/ruin/space/dragoon
 	id = "dragoon"

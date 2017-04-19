@@ -13,8 +13,8 @@
 // END_PREFERENCES
 
 // BEGIN_INCLUDE
-#include "_maps\basemap.dm"
 #include "_maps\loadallmaps.dm"
+#include "_maps\runtimestation.dm"
 #include "code\_compile_options.dm"
 #include "code\world.dm"
 #include "code\__DATASTRUCTURES\globals.dm"
@@ -657,8 +657,8 @@
 #include "code\game\objects\effects\mines.dm"
 #include "code\game\objects\effects\misc.dm"
 #include "code\game\objects\effects\overlays.dm"
-#include "code\game\objects\effects\proximity.dm"
 #include "code\game\objects\effects\portals.dm"
+#include "code\game\objects\effects\proximity.dm"
 #include "code\game\objects\effects\spiders.dm"
 #include "code\game\objects\effects\step_triggers.dm"
 #include "code\game\objects\effects\wanted_poster.dm"
