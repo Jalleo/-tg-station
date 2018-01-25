@@ -137,7 +137,7 @@
 "I" = (
 /obj/structure/lattice,
 /turf/template_noop,
-/area/ruin/space/has_grav/powered/mechtransport)
+/area/space/nearstation)
 "J" = (
 /obj/machinery/computer/mecha{
 	dir = 8
@@ -170,7 +170,7 @@
 "P" = (
 /obj/item/stack/sheet/metal,
 /turf/template_noop,
-/area/ruin/space/has_grav/powered/mechtransport)
+/area/template_noop)
 "Q" = (
 /obj/structure/mecha_wreckage/gygax,
 /turf/open/floor/mineral/titanium/airless,
@@ -184,13 +184,10 @@
 /obj/item/stack/rods,
 /turf/open/floor/plating/airless,
 /area/ruin/space/has_grav/powered/mechtransport)
-"T" = (
-/turf/template_noop,
-/area/ruin/space/has_grav/powered/mechtransport)
 "V" = (
 /obj/item/stack/rods,
 /turf/template_noop,
-/area/ruin/space/has_grav/powered/mechtransport)
+/area/template_noop)
 "X" = (
 /obj/structure/shuttle/engine/propulsion,
 /turf/template_noop,
@@ -209,9 +206,9 @@ G
 I
 M
 P
-T
-T
-T
+a
+a
+a
 "}
 (2,1,1) = {"
 b
@@ -228,7 +225,7 @@ H
 I
 R
 V
-T
+a
 "}
 (3,1,1) = {"
 c
@@ -244,8 +241,8 @@ H
 N
 I
 I
-T
-T
+a
+a
 "}
 (4,1,1) = {"
 c
@@ -261,8 +258,8 @@ w
 G
 H
 P
-T
-T
+a
+a
 "}
 (5,1,1) = {"
 c
@@ -279,7 +276,7 @@ O
 s
 S
 I
-T
+a
 "}
 (6,1,1) = {"
 c
@@ -295,8 +292,8 @@ L
 O
 H
 H
-T
-T
+a
+a
 "}
 (7,1,1) = {"
 c

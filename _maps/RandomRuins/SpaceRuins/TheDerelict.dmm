@@ -669,7 +669,7 @@
 /area/ruin/unpowered/no_grav)
 "ci" = (
 /turf/closed/wall/r_wall,
-/area/template_noop)
+/area/space/nearstation)
 "cj" = (
 /obj/structure/cable{
 	icon_state = "1-2"
