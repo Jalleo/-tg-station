@@ -11,8 +11,7 @@
 	throwforce = 0
 	throw_speed = 3
 	throw_range = 7
-	origin_tech = "magnets=1;programming=3"
-	flags_1 = NOBLUDGEON_1
+	item_flags = NOBLUDGEON
 	var/list/signs = list()
 	var/max_signs = 10
 	var/creation_time = 0 //time to create a holosign in deciseconds.
@@ -123,4 +122,3 @@
 		for(var/H in signs)
 			qdel(H)
 		to_chat(user, "<span class='notice'>You clear all active holograms.</span>")
-

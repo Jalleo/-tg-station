@@ -10,7 +10,7 @@
 	name = "Shuttle Loan"
 	typepath = /datum/round_event/shuttle_loan
 	max_occurrences = 1
-	earliest_start = 4000
+	earliest_start = 7 MINUTES
 
 /datum/round_event/shuttle_loan
 	announceWhen = 1
@@ -20,10 +20,10 @@
 	var/bonus_points = 10000
 	var/thanks_msg = "The cargo shuttle should return in five minutes. Have some supply points for your trouble."
 
-/datum/round_event/shuttle_loan/start()
+/datum/round_event/shuttle_loan/setup()
 	dispatch_type = pick(HIJACK_SYNDIE, RUSKY_PARTY, SPIDER_GIFT, DEPARTMENT_RESUPPLY, ANTIDOTE_NEEDED, PIZZA_DELIVERY)
 
-/datum/round_event/shuttle_loan/announce()
+/datum/round_event/shuttle_loan/announce(fake)
 	SSshuttle.shuttle_loan = src
 	switch(dispatch_type)
 		if(HIJACK_SYNDIE)
@@ -103,7 +103,7 @@
 					shuttle_spawns.Add(/mob/living/simple_animal/hostile/syndicate)
 
 			if(RUSKY_PARTY)
-				var/datum/supply_pack/pack = SSshuttle.supply_packs[/datum/supply_pack/organic/party]
+				var/datum/supply_pack/pack = SSshuttle.supply_packs[/datum/supply_pack/service/party]
 				pack.generate(pick_n_take(empty_shuttle_turfs))
 
 				shuttle_spawns.Add(/mob/living/simple_animal/hostile/russian)

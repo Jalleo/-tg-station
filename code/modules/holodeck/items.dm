@@ -25,13 +25,13 @@
 	armour_penetration = 50
 	var/active = 0
 
-/obj/item/holo/esword/green/New()
-	..()
+/obj/item/holo/esword/green/Initialize()
+	. = ..()
 	item_color = "green"
 
 
-/obj/item/holo/esword/red/New()
-	..()
+/obj/item/holo/esword/red/Initialize()
+	. = ..()
 	item_color = "red"
 
 /obj/item/holo/esword/hit_reaction(mob/living/carbon/human/owner, atom/movable/hitby, attack_text = "the attack", final_block_chance = 0, damage = 0, attack_type = MELEE_ATTACK)
@@ -42,9 +42,9 @@
 /obj/item/holo/esword/attack(target as mob, mob/user as mob)
 	..()
 
-/obj/item/holo/esword/New()
+/obj/item/holo/esword/Initialize()
+	. = ..()
 	item_color = pick("red","blue","green","purple")
-	..()
 
 /obj/item/holo/esword/attack_self(mob/living/user as mob)
 	active = !active
@@ -108,12 +108,15 @@
 			visible_message("<span class='warning'> [user] dunks [W] into \the [src]!</span>")
 
 /obj/structure/holohoop/attack_hand(mob/user)
+	. = ..()
+	if(.)
+		return
 	if(user.pulling && user.a_intent == INTENT_GRAB && isliving(user.pulling))
 		var/mob/living/L = user.pulling
 		if(user.grab_state < GRAB_AGGRESSIVE)
 			to_chat(user, "<span class='warning'>You need a better grip to do that!</span>")
 			return
-		L.loc = src.loc
+		L.forceMove(loc)
 		L.Knockdown(100)
 		visible_message("<span class='danger'>[user] dunks [L] into \the [src]!</span>")
 		user.stop_pulling()
@@ -147,7 +150,6 @@
 	var/area/currentarea = null
 	var/eventstarted = FALSE
 
-	anchored = TRUE
 	use_power = IDLE_POWER_USE
 	idle_power_usage = 2
 	active_power_usage = 6
@@ -165,6 +167,9 @@
 	to_chat(user, "The device is a solid button, there's nothing you can do with it!")
 
 /obj/machinery/readybutton/attack_hand(mob/user as mob)
+	. = ..()
+	if(.)
+		return
 	if(user.stat || stat & (NOPOWER|BROKEN))
 		to_chat(user, "<span class='warning'>This device is not powered!</span>")
 		return
